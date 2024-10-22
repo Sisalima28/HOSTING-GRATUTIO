@@ -1,0 +1,16 @@
+<!-- Galería de fotos -->
+<div class="photo-list">
+    <div *ngFor="let photo of photos" class="photo-card">
+        <img [src]="photo.url" [alt]="photo.title" (click)="openModal(photo)">
+        <h3>{{ photo.title }}</h3>
+    </div>
+</div>
+
+<!-- Modal para mostrar la imagen seleccionada -->
+<div *ngIf="selectedPhoto" class="modal" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <img [src]="selectedPhoto.url" [alt]="selectedPhoto.title">
+        <h2>{{ selectedPhoto.title }}</h2>
+        <p>{{ selectedPhoto.description }}</p>
+    </div>
+</div>

@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+.photo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photo-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.photo-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.photo-details img {
+    max-width: 100%;
+}
